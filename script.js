@@ -942,7 +942,6 @@ numberLettersSelect.addEventListener("input", function () {
 let randomIndex = Math.floor(Math.random()
   *wordsByLength[numberLettersSelect.value][typeWordSelect.value].length);
   randomItem = wordsByLength[numberLettersSelect.value][typeWordSelect.value][+randomIndex];
-  console.log(randomItem)
   
   creatingInputs(randomItem);
   
@@ -986,7 +985,6 @@ allLetters.forEach(letter => {
   
 });
 let counterImages= 0
-let counterLetters=0
 
 function valuesInputsAndCheck(randomItem,clickedLetter) {
 	let loweredRandomItem=randomItem.toLowerCase();
@@ -998,7 +996,6 @@ function valuesInputsAndCheck(randomItem,clickedLetter) {
       document.querySelector(`.input-${i}`).classList.add("green");
       document.querySelector(`.input-${i}`).style.color="white";
       document.querySelector(`.input-${i}`).value= loweredClickedLetter
-      counterLetters+=1
     }}
   }
   else{
